@@ -10,7 +10,7 @@ const MegaFeature = ({ content }) => {
     <div className="feature-section-wrapper">
       <div className="container">
         <div className="feature-inner">
-          <h3 className="feature-header">{hasHeader && header}</h3>
+          {hasHeader && <h3 className="feature-header">{header}</h3>}
           <div className={`feature-wrapper ${textFirst ? 'row' : 'row-reverse'}`}>
             <div className="feature-text">
               {text.map((item, i) => (
