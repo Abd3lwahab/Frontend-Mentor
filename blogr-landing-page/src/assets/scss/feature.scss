@@ -1,0 +1,163 @@
+@import 'main';
+
+.feature-section-wrapper {
+  padding: 90px 0 30px;
+  overflow: hidden;
+
+  @include md {
+    padding: 130px 0 30px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+.feature-header {
+  font-family: $secondary-font;
+  color: $very-dark-blue;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 30px;
+
+  @include md {
+    font-size: 36px;
+  }
+}
+
+.feature-wrapper {
+  display: flex;
+  flex: 1 1;
+  width: 100%;
+  margin-top: 30px;
+
+  @include md {
+    margin-top: 70px;
+  }
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.feature-img {
+  display: flex;
+  flex: 1;
+  flex-direction: inherit;
+
+  img {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    @include md {
+      width: 170%;
+      margin-top: -200px;
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+  }
+}
+
+.feature-single {
+  margin: 35px 0;
+  text-align: center;
+
+  @include md {
+    text-align: left;
+  }
+
+  .feature-title {
+    color: $very-dark-blue;
+    margin-bottom: 20px;
+  }
+
+  .feature-desc {
+    font-family: $secondary-font;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: $dark-grayish-blue;
+    font-weight: 500;
+    padding: 0 10px;
+
+    @include md {
+      padding: 0;
+    }
+  }
+}
+
+h5 {
+  font-family: $secondary-font;
+  font-weight: 600;
+  font-size: 30px;
+
+  @include md {
+    font-size: 26px;
+  }
+}
+
+.mini-feature-wrapper {
+  background: url('../images/bg-pattern-circles.svg'), $blue-gradiant;
+  background-repeat: no-repeat;
+  background-position: 50% 125%;
+
+  border-radius: 0px 70px 0px 70px;
+  color: $white;
+
+  margin-top: 200px;
+  padding-bottom: 40px;
+
+  @include md {
+    margin-top: 0;
+    background-position: -70% 70%;
+    padding-bottom: 0;
+  }
+}
+
+.mini-feature-inner {
+  display: flex;
+  align-items: center;
+}
+
+.mini-feature-img {
+  display: flex;
+  flex: 1;
+  margin-top: -180px;
+
+  @include md {
+    margin-top: -65px;
+    margin-bottom: -110px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.mini-feature-text {
+  display: flex;
+  flex: 1;
+
+  .feature-single {
+    @include md {
+      padding-left: 40px;
+    }
+
+    .feature-title {
+      color: inherit;
+      font-size: 35px;
+
+      @include md {
+        font-size: 30px;
+      }
+    }
+
+    .feature-desc {
+      color: inherit;
+    }
+  }
+}

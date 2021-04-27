@@ -1,0 +1,96 @@
+@import 'main.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: $font-size;
+  background-color: #ffffff;
+  @include md {
+    background-color: #fafafa;
+  }
+}
+
+.container {
+  display: flex;
+  padding: 0px 20px;
+  @include sm {
+    padding: 0 40px;
+  }
+
+  @include lg {
+    padding: 0 100px;
+  }
+  @include xl {
+    padding: 0 150px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: $white;
+  transition: all 0.3s ease-in-out;
+  margin: 0 5px;
+
+  &.btn-wide {
+    padding: 15px 35px;
+  }
+
+  &:not(.btn-cta):not(.btn-outline) {
+    opacity: 0.8;
+  }
+
+  &:not(.btn-cta):not(.btn-outline):hover {
+    opacity: 1;
+  }
+
+  &.btn-cta {
+    color: $light-red;
+    background-color: $white;
+
+    &:hover {
+      color: $white;
+      background-color: $very-light-red;
+    }
+  }
+
+  &.btn-outline {
+    border: 1px solid $white;
+
+    &:hover {
+      background-color: $white;
+      color: $light-red;
+    }
+  }
+}
+
+.row {
+  flex-direction: column-reverse;
+  @include md {
+    flex-direction: row;
+  }
+}
+
+.row-reverse {
+  flex-direction: column-reverse;
+  @include md {
+    flex-direction: row-reverse;
+  }
+}

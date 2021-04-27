@@ -1,0 +1,251 @@
+@import 'main.scss';
+
+.top-section-wrapper {
+  width: 100%;
+  background: url('../images/bg-pattern-intro.svg'), $red-gradiant;
+  background-position: 25% 50%;
+  border-radius: 0px 0px 0px 70px;
+}
+
+.intro-wrapper {
+  width: 100%;
+}
+
+.navbar-wrapper {
+  color: $white;
+  padding: 60px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  margin-right: 20px;
+  vertical-align: middle;
+
+  @include lg {
+    margin-right: 70px;
+  }
+}
+
+.nav-list-wrapper {
+  font-family: $secondary-font;
+  display: none;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  top: 120px;
+  flex-direction: column;
+  background-color: $white;
+  box-shadow: $box-shadow;
+  border-radius: 6px;
+  padding: 40px 25px;
+
+  @include md {
+    font-family: $primary-font;
+    display: flex;
+    flex-direction: row;
+    position: unset;
+    box-shadow: none;
+    background-color: unset;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .nav-list {
+    align-self: center;
+    list-style-type: none;
+    width: 100%;
+    border-bottom: 1px solid hsl(0, 0%, 89%);
+
+    @include md {
+      width: auto;
+      border: none;
+    }
+  }
+
+  .nav-btns {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    @include md {
+      display: block;
+      margin-top: 0px;
+    }
+
+    .btn {
+      color: $very-dark-blue;
+      opacity: 1;
+      font-weight: 600;
+      font-size: 18px;
+      margin: 0 0 5px 0;
+
+      @include md {
+        color: inherit;
+        opacity: 0.8;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 0px;
+      }
+    }
+
+    .btn-cta {
+      background: $red-gradiant;
+      color: #ffffff;
+      font-family: $primary-font;
+      font-weight: 500;
+      margin-bottom: 0px;
+
+      @include md {
+        background: $white;
+        opacity: 1;
+        color: $light-red;
+        font-family: $primary-font;
+        font-weight: 500;
+        margin-bottom: 0px;
+
+        &:hover {
+          color: $white;
+          background-color: $very-light-red;
+        }
+      }
+    }
+  }
+}
+
+.nav-item {
+  display: block;
+  margin: 0 0 25px 0;
+  font-weight: 600;
+  position: relative;
+  font-size: 18px;
+  @include md {
+    display: inline-block;
+    margin: 0 30px 0 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .nav-item-title {
+    cursor: pointer;
+    @include md {
+      opacity: 0.8;
+    }
+
+    span {
+      color: $very-dark-blue;
+      margin-right: 8px;
+
+      @include md {
+        border-bottom: 2px solid transparent;
+        color: $white;
+      }
+    }
+  }
+
+  .nav-item-title:hover {
+    @include md {
+      opacity: 1;
+      span {
+        border-bottom: 2px solid #ffffff;
+      }
+    }
+  }
+
+  &.isOpened {
+    span {
+      color: $dark-grayish-blue;
+    }
+    @include md {
+      .nav-item-title {
+        opacity: 1;
+      }
+      span {
+        color: inherit;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    list-style-type: none;
+    background-color: hsl(240, 7%, 94%);
+    padding: 15px 30px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 15px;
+
+    @include md {
+      position: absolute;
+      top: 35px;
+      left: -20px;
+      background-color: $white;
+      box-shadow: $box-shadow;
+      width: auto;
+      margin-top: 0;
+      text-align: left;
+    }
+
+    .dropdown-menu-item {
+      color: $dark-grayish-blue;
+      font-weight: 600;
+      margin: 20px 0px;
+      min-width: 120px;
+
+      @include md {
+        font-weight: 500;
+        margin: 15px 0px;
+        color: $very-dark-blue;
+      }
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.intro-content {
+  text-align: center;
+  color: #ffffff;
+  padding: 55px 0 151px;
+
+  h1.main-title {
+    margin-bottom: 20px;
+  }
+
+  h4.main-slag {
+    margin-bottom: 50px;
+  }
+}
+
+h1 {
+  font-family: $secondary-font;
+  font-size: 38px;
+  font-weight: 600;
+  @include md {
+    font-size: 60px;
+  }
+}
+
+h4 {
+  font-family: $secondary-font;
+  font-size: 18px;
+  font-weight: 300;
+  @include md {
+    font-size: 20px;
+  }
+}
+
+.mobile-menu-trigger {
+  display: block;
+  cursor: pointer;
+  @include md {
+    display: none;
+  }
+}

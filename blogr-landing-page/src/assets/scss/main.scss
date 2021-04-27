@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+@import 'mixins';
+
+$primary-font: 'Ubuntu', sans-serif;
+$secondary-font: 'Overpass', sans-serif;
+
+$font-size: 16px;
+
+$light-red: hsl(356, 100%, 66%);
+$very-light-red: hsl(355, 100%, 74%);
+$very-dark-blue: hsl(208, 49%, 24%);
+
+$white: hsl(0, 0%, 100%);
+$grayish-blue: hsl(240, 2%, 79%);
+$dark-grayish-blue: hsl(207, 13%, 34%);
+$dark-black-blue: hsl(240, 10%, 16%);
+
+$red-gradiant: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+$blue-gradiant: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+
+$box-shadow: 0px 0px 25px 0px #8080804f;
